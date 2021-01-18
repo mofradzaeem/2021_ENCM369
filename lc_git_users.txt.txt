@@ -2,3 +2,4 @@ firstname,lastname,email,git_username,repository_name
 Mofrad Zaeem,Haque,mofradhaque@gmail.com,mofradzaeem,2021_ENCM369
 qian,chen,qian.chen2@ucalgary.ca,qian2222,2021_ENCM369
 hannah,son,hannahson01@gmail.com,novellichor,2021_ENCM369
+Mansi,Tawar,mansi58892@gmail.com,Mansi-Tawar,2021_ENCM369
