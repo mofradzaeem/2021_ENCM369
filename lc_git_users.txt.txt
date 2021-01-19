@@ -5,3 +5,4 @@ hannah,son,hannahson01@gmail.com,novellichor,2021_ENCM369
 Mansi,Tawar,mansi58892@gmail.com,Mansi-Tawar,2021_ENCM369
 SK Mahin, Razwan, mahin.razwan212@gmail.com, mahin-razwan, 2021_ENCM369
 Lisa,Huang,lisa.huang1@ucalgary.ca,liy-hu,2021_ENCM369
+Jackie,Wu,jackie.wu1@ucalgary.ca,JW-tldgn,2021_ENCM369
