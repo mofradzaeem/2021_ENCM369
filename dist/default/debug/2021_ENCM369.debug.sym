@@ -253,9 +253,9 @@ text2 1FF50 1FF51 CODE 1FF50 0
 text3 1FF4E 1FF4F CODE 1FF4E 0
 text6 1FF4C 1FF4D CODE 1FF4C 0
 %locals
-dist/default/production\2021_ENCM369.production.o
+dist/default/debug\2021_ENCM369.debug.o
 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-Q_DFP/1.8.154/xc8\pic\include\proc\pic18f27q43.h
-C:\Users\MOFRAD~1\AppData\Local\Temp\suvc.s
+C:\Users\MOFRAD~1\AppData\Local\Temp\stuo.s
 5088 1FF52 0 CODE 0
 5090 1FF52 0 CODE 0
 5093 1FF52 0 CODE 0
