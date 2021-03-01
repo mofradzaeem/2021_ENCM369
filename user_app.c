@@ -94,8 +94,20 @@ Promises:
 */
 void UserAppRun(void)
 {
-
-
+    static u32 u32counter=0;
+    if(port == 0x30)  //checks if the button is pressed
+    {
+        u32counter++;   //increment counter
+        LATA=u32counter|0x80;//LED is turned on and keep R7 on
+        while(1)  //loops until button is released
+        {
+            if(PORTB==0x10)
+            {
+                break;
+            }
+        }
+    }
+        
 } /* end UserAppRun */
 
 
