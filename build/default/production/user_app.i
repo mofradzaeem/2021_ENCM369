@@ -27289,6 +27289,7 @@ void SystemSleep(void);
 # 27 "./user_app.h"
 void UserAppInitialize(void);
 void UserAppRun(void);
+void TimeXus(u16 u16timer);
 # 106 "./configuration.h" 2
 # 26 "user_app.c" 2
 
@@ -27309,27 +27310,35 @@ extern volatile u32 G_u32SystemFlags;
 # 76 "user_app.c"
 void UserAppInitialize(void)
 {
+    T0CON0 =0x90;
+    T0CON1 =0x54;
 
 
 }
-# 95 "user_app.c"
+# 97 "user_app.c"
 void UserAppRun(void)
 {
-    u32 u32counter;
-    while(1)
+    static u16 u16counter=0;
+    static u8 u8pcounter=0;
+    u8 au8pattern[]={0x01,0x20,0x02,0x10,0x04,0x08};
+    if(u16counter>=500)
     {
-        if(LATA == 0xC0)
-        {
-            LATA =0x80;
-            break;
-        }
-        for(u32counter=0;u32counter<200000;)
-        {
-            u32counter++;
-        }
-        LATA +=0x01;
-
-
-        }
+        u16counter=0;
+        LATA=au8pattern[u8pcounter];
+        u8pcounter++;
 
     }
+    u16counter++;
+    if(u8pcounter>5)
+        u8pcounter=0;
+
+}
+# 129 "user_app.c"
+void TimeXus(u16 u16timer)
+{
+    T0CON0 =T0CON0 & 0x7f;
+    TMR0H =((0xffff - u16timer) & 0xff00) >> 8;
+    TMR0L =(0xffff - u16timer) & 0xff;
+    PIR3 =PIR3 & 0x7f;
+    T0CON0 =T0CON0 | 0x80;
+}
