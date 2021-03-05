@@ -94,9 +94,22 @@ Promises:
 */
 void UserAppRun(void)
 {
-
-
-} /* end UserAppRun */
+    u32 u32counter;
+    while(1)
+    {
+        if(LATA == 0xC0) 
+        {
+            LATA =0x80;
+            break;
+        }
+        for(u32counter=0;u32counter<200000;)
+        {
+            u32counter++;
+        }
+        LATA +=0x01;
+    }
+}
+  /* end UserAppRun */
 
 
 
