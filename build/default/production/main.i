@@ -27334,12 +27334,11 @@ void main(void)
 
 
 
-                   ;
-    SystemSleep();
-    TimeXus(0x03E8);
-    while((PIR3 & 0x80)!=0x80){}
-                  ;
 
+
+    TimeXus(11);
+    while(PIR3bits.TMR0IF == 0);
+# 73 "main.c"
   }
 
 }
